@@ -23,6 +23,10 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# sqlite temporary wal files
+data/*.db-wal
+data/*.db-shm
+
 # typescript build info
 *.tsbuildinfo
 next-env.d.ts
