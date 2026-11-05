@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-sand: #FAF8F5;
+    --card-surface: #FFFFFF;
+    --text-primary: #1C1917;
+    --text-muted: #78716C;
+    --accent-terracotta: #9A3412;
+    --accent-bronze: #B45309;
+    --border-warm: #E7E3DC;
+  }
+
+  body {
+    background-color: var(--bg-sand);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-serif-custom {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  }
+}
+
+/* Custom aesthetic utility touches */
+.glass-nav {
+  background: rgba(250, 248, 245, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.luxury-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(28, 25, 23, 0.08);
+}
