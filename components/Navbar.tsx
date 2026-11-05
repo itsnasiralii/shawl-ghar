@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Search, ShoppingBag, Menu, X, Shield, Phone, Sparkles } from 'lucide-react';
+import { Search, ShoppingBag, Menu, X, Phone } from 'lucide-react';
 import { cleanWhatsAppNumber } from '@/lib/format';
 
 interface NavbarProps {
@@ -35,7 +35,6 @@ export default function Navbar({
     { name: 'Home', href: '/' },
     { name: 'Collection', href: '/products' },
     { name: 'Categories', href: '/categories' },
-    { name: 'Admin Portal', href: '/admin' },
   ];
 
   return (
@@ -179,14 +178,6 @@ export default function Navbar({
               <Phone className="w-4 h-4 text-emerald-600" />
               <span>Order via WhatsApp: {whatsappNumber}</span>
             </a>
-            <Link
-              href="/admin/login"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-2 px-3 py-2 rounded-md text-amber-900 bg-amber-50 font-medium text-sm"
-            >
-              <Shield className="w-4 h-4" />
-              <span>Admin Portal Login</span>
-            </Link>
           </div>
         </div>
       )}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Sparkles, Phone, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Sparkles, Phone } from 'lucide-react';
 import { getSettings } from '@/lib/db';
 import { cleanWhatsAppNumber } from '@/lib/format';
 
@@ -31,16 +31,12 @@ export default function PromoBanner() {
             className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-semibold transition"
           >
             <Phone className="w-3.5 h-3.5 text-emerald-400" />
-            <span>WhatsApp Orders: {whatsapp}</span>
+            <span>WhatsApp Hotline: {whatsapp}</span>
           </a>
-          <span className="text-stone-700">|</span>
-          <Link
-            href="/admin"
-            className="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1 transition-colors"
-          >
-            <span>Admin Portal</span>
-            <ArrowRight className="w-3 h-3" />
-          </Link>
+          <span className="text-stone-700 hidden sm:inline">|</span>
+          <span className="text-amber-400 font-medium hidden sm:inline">
+            Free Shipping Nationwide
+          </span>
         </div>
       </div>
     </div>

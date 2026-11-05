@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Clock, ShieldCheck, HeartHandshake, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, HeartHandshake, MessageCircle } from 'lucide-react';
 import { getSettings } from '@/lib/db';
 import { cleanWhatsAppNumber } from '@/lib/format';
 
@@ -89,15 +89,19 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/admin/login" className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-amber-500" />
-                  <span>Admin Portal</span>
+                <Link href="/#craftsmanship" className="hover:text-amber-400 transition-colors">
+                  Authentic Craftsmanship
                 </Link>
               </li>
               <li>
-                <Link href="/admin/settings" className="hover:text-amber-400 transition-colors">
-                  Name &amp; WhatsApp Settings
-                </Link>
+                <a
+                  href={`https://wa.me/${cleanPhone}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amber-400 transition-colors"
+                >
+                  Direct WhatsApp Orders
+                </a>
               </li>
             </ul>
           </div>
